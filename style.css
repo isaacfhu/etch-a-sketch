@@ -9,8 +9,7 @@ body {
 .grid {
   background-color: red;
   box-sizing: border-box;
-  width: 500px;
-  height: 500px;
+  width: 300px;
   aspect-ratio: 1;
   padding: 1%;
 

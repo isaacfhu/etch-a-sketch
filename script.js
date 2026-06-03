@@ -14,3 +14,12 @@ function createGrid(squaresPerSide) {
   }
 }
 createGrid(16);
+
+document
+  .querySelectorAll(".grid-pixel")
+  .forEach((element) =>
+    element.addEventListener(
+      "mouseover",
+      () => (element.style.backgroundColor = "pink"),
+    ),
+  );
