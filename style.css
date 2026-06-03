@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.grid {
+  background-color: red;
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  aspect-ratio: 1;
+  padding: 1%;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: start;
+  align-content: start;
+}
+
+.grid-pixel {
+  background-color: aqua;
+  box-sizing: border-box;
+  border: 1px solid;
+  margin: 0px;
+  aspect-ratio: 1;
+}
