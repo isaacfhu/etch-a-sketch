@@ -10,18 +10,22 @@ function createGrid(squaresPerSide) {
     const gridPixel = document.createElement("div");
     gridPixel.setAttribute("class", "grid-pixel");
     gridPixel.style.width = pixelPercentage + "%";
+    gridPixel.style.opacity = 1;
 
     grid.appendChild(gridPixel);
   }
 
-  document
-    .querySelectorAll(".grid-pixel")
-    .forEach((element) =>
-      element.addEventListener(
-        "mouseover",
-        () => (element.style.backgroundColor = "pink"),
-      ),
-    );
+  document.querySelectorAll(".grid-pixel").forEach((element) =>
+    element.addEventListener("mouseover", () => {
+      const randomRGB = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+      element.style.backgroundColor = randomRGB;
+
+      if (parseFloat(element.style.opacity) > 0) {
+        element.style.opacity -= 0.1;
+      }
+      console.log(element.style.opacity);
+    }),
+  );
 }
 
 function gridSizeInput() {
