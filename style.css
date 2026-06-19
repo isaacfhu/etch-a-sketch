@@ -22,7 +22,7 @@ body {
 }
 
 .grid-pixel {
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
   border: 1px solid;
   margin: 0px;
