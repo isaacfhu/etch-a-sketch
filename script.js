@@ -1,12 +1,13 @@
 const grid = document.querySelector(".grid");
 const buttonGridSize = document.querySelector(".input-grid-size");
 const buttonResetGrid = document.querySelector(".reset-grid-size");
+const buttonRandomizeColor = document.querySelector(".randomize-color");
 let isDrawing = false;
-let isRGB = false;
+let isRandomColor = false;
 let size = 16;
 
 function paint(element) {
-  if (isRGB) {
+  if (isRandomColor) {
     const randomRGB = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     element.style.backgroundColor = randomRGB;
   } else {
@@ -63,5 +64,8 @@ createGrid(size);
 
 buttonGridSize.addEventListener("click", gridSizeInput);
 buttonResetGrid.addEventListener("click", resetGrid);
+buttonRandomizeColor.addEventListener("click", () =>
+  isRandomColor === false ? (isRandomColor = true) : (isRandomColor = false),
+);
 document.addEventListener("mousedown", () => (isDrawing = true));
 document.addEventListener("mouseup", () => (isDrawing = false));
