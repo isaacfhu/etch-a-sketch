@@ -4,14 +4,16 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .grid {
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
-  width: 300px;
+  border: 10px solid rgb(126, 126, 126);
+  width: 500px;
   aspect-ratio: 1;
-  padding: 1%;
+  padding: 0px;
 
   display: flex;
   justify-content: flex-start;
@@ -28,4 +30,46 @@ body {
   margin: 0px;
   aspect-ratio: 1;
   opacity: 1;
+}
+
+.top-bar {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  background-color: rgb(126, 126, 126);
+  border-radius: 1%;
+}
+
+.top-bar button {
+  background-color: black;
+  color: whitesmoke;
+  border: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.randomize-color {
+  font-weight: bolder;
+}
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.yellow {
+  color: yellow;
+}
+.green {
+  color: lawngreen;
+}
+.blue {
+  color: blue;
+}
+.indigo {
+  color: indigo;
+}
+.violet {
+  color: violet;
 }
