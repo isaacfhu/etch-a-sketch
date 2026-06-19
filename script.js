@@ -1,7 +1,9 @@
 const grid = document.querySelector(".grid");
 const buttonGridSize = document.querySelector(".input-grid-size");
+const buttonResetGrid = document.querySelector(".reset-grid-size");
 let isDrawing = false;
 let isRGB = false;
+let size = 16;
 
 function paint(element) {
   if (isRGB) {
@@ -44,16 +46,22 @@ function createGrid(squaresPerSide) {
   });
 }
 
+function resetGrid() {
+  createGrid(size);
+}
+
 function gridSizeInput() {
   let gridSizeInput = prompt("Type Grid Size");
   if (isNaN(gridSizeInput)) return;
   else if (gridSizeInput > 100) gridSizeInput = 100;
 
-  createGrid(gridSizeInput);
+  size = gridSizeInput;
+  createGrid(size);
 }
 
-createGrid(16);
+createGrid(size);
 
 buttonGridSize.addEventListener("click", gridSizeInput);
+buttonResetGrid.addEventListener("click", resetGrid);
 document.addEventListener("mousedown", () => (isDrawing = true));
 document.addEventListener("mouseup", () => (isDrawing = false));
